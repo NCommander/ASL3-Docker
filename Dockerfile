@@ -25,5 +25,9 @@ COPY ./asl3-init.sh /root/asl3-init.sh
 RUN chmod +x /root/asl3-init.sh
 RUN /root/asl3-init.sh
 
+RUN mkdir -p /asl3
+COPY asl3/asl3.sh /asl3
+COPY asl3/asterisk-cli.sh /asl3
+
 # Startup
 ENTRYPOINT ["/usr/bin/bash","-c","/asl3/asl3.sh"]

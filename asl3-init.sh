@@ -14,10 +14,10 @@ apt update
 apt install -y linux-headers-$(uname -r)
 
 # prep /etc/asterisk
-if [ ! -f /etc/asterisk/asterisk.conf ]; then
-	rm -rf /etc/asterisk/*
-fi
+#if [ ! -f /etc/asterisk/asterisk.conf ]; then
+#	rm -rf /etc/asterisk/*
+#fi
 chown asterisk:asterisk /etc/asterisk
 
 # install
-apt install -y asl3 
+apt install -y asl3
