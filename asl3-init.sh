@@ -11,7 +11,7 @@ dpkg -i asl-apt-repos.deb13_all.deb
 apt update
 
 # install kernel headers in preparation
-apt install -y linux-headers-$(uname -r)
+apt install -y linux-headers-$(uname -r) kmod
 
 # prep /etc/asterisk
 #if [ ! -f /etc/asterisk/asterisk.conf ]; then
