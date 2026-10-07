@@ -3,7 +3,7 @@
 
 ##
 ## Architecture to compose - Supported options are 'amd64' and 'arm64'
-ARG ARCH="amd64"
+#ARG ARCH="amd64"
 
 ##
 ## Debian version to compose - Supported options are '12-slim' and '12'
@@ -13,7 +13,8 @@ ARG DEB_VER="13-slim"
 ## Without experience, do not change past this line
 ## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FROM $ARCH/debian:$DEB_VER
+#FROM $ARCH/debian:$DEB_VER
+FROM debian:$DEB_VER
 WORKDIR /root
 
 # setup fake systemd environment
